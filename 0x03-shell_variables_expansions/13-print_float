@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%.5f" $NMM
+echo $NUM
