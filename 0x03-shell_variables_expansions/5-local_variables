@@ -1,2 +1,2 @@
 #!/bin/bash
-"$(set)$(printenv)" | sort
+set -o posix > set) | grep -E '^\w+='
