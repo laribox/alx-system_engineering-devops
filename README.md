@@ -22,10 +22,46 @@ To get started with the ALX DevOps course tasks and projects, follow these steps
 
 This section provides an overview of the tasks and projects included in this repository:
 
-1. **Task 1: Introduction to DevOps**
-   - **Description**: Implement basic DevOps practices and tools.
-   - **Status**: Completed
-   - **Documentation**: [Task 1 Documentation](tasks/task1/README.md)
+1. **Project: 0x00-shell_basics**
+   - **Description**: Introduction to Shell Basics.
+   - **Tasks**:
+     - Task 0: Script that prints "Hello, World".
+     - Task 1: Script that displays the content of a file.
+     - Task 2: Script that changes the permissions of a file.
+     - ...
+   - **Status**: In Progress
+   - **Documentation**: [Project 0x00-shell_basics Documentation](0x00-shell_basics/README.md)
+
+2. **Project: 0x01-shell_permissions**
+   - **Description**: Introduction to Shell Permissions.
+   - **Tasks**:
+     - Task 0: Script that changes the owner of a file.
+     - Task 1: Script that creates an empty file with specific permissions.
+     - Task 2: Script that adds execute permissions to a file.
+     - ...
+   - **Status**: Not Started
+   - **Documentation**: [Project 0x01-shell_permissions Documentation](projects/0x01-shell_permissions/README.md)
+
+3. **Project: 0x02-shell_redirections**
+   - **Description**: Introduction to Shell Redirections.
+   - **Tasks**:
+     - Task 0: Script that displays the content of a file and outputs to another file.
+     - Task 1: Script that counts the number of lines in a file.
+     - Task 2: Script that searches for a pattern in a file.
+     - ...
+   - **Status**: Not Started
+   - **Documentation**: [Project 0x02-shell_redirections Documentation](projects/0x02-shell_redirections/README.md)
+
+4. **Project: 0x03-shell_variables_expansions**
+   - **Description**: Introduction to Shell Variables and Expansions.
+   - **Tasks**:
+     - Task 0: Script that creates an alias.
+     - Task 1: Script that prints the value of a variable.
+     - Task 2: Script that concatenates two strings.
+     - ...
+   - **Status**: Not Started
+   - **Documentation**: [Project 0x03-shell_variables_expansions Documentation](projects/0x03-shell_variables_expansions/README.md)
+
 
 
 ## Prerequisites
