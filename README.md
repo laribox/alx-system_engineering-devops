@@ -40,7 +40,7 @@ This section provides an overview of the tasks and projects included in this rep
      - Task 2: Script that adds execute permissions to a file.
      - ...
    - **Status**: Not Started
-   - **Documentation**: [Project 0x01-shell_permissions Documentation](projects/0x01-shell_permissions/README.md)
+   - **Documentation**: [Project 0x01-shell_permissions Documentation](0x01-shell_permissions/README.md)
 
 3. **Project: 0x02-shell_redirections**
    - **Description**: Introduction to Shell Redirections.
@@ -50,7 +50,7 @@ This section provides an overview of the tasks and projects included in this rep
      - Task 2: Script that searches for a pattern in a file.
      - ...
    - **Status**: Not Started
-   - **Documentation**: [Project 0x02-shell_redirections Documentation](projects/0x02-shell_redirections/README.md)
+   - **Documentation**: [Project 0x02-shell_redirections Documentation](0x02-shell_redirections/README.md)
 
 4. **Project: 0x03-shell_variables_expansions**
    - **Description**: Introduction to Shell Variables and Expansions.
@@ -60,7 +60,7 @@ This section provides an overview of the tasks and projects included in this rep
      - Task 2: Script that concatenates two strings.
      - ...
    - **Status**: Not Started
-   - **Documentation**: [Project 0x03-shell_variables_expansions Documentation](projects/0x03-shell_variables_expansions/README.md)
+   - **Documentation**: [Project 0x03-shell_variables_expansions Documentation](0x03-shell_variables_expansions/README.md)
 
 
 
