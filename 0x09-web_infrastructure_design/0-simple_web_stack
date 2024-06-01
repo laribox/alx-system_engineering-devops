@@ -21,3 +21,13 @@
 
 * What is the server using to communicate with the computer of the user requesting the website
     The server communicates with the user's computer using the HTTP/HTTPS protocol
+
+
+* Single Point of Failure (SPOF):
+        Since all components are on a single server, if this server fails, the entire website becomes unavailable.
+    
+* Downtime for Maintenance:
+        Any maintenance, such as deploying new code or restarting the web server (Nginx), will cause downtime, making the website temporarily inaccessible.
+    
+* Scalability Issues:
+        A single server setup cannot handle a large amount of incoming traffic efficiently. As traffic increases, the server may become overloaded, leading to slow performance or crashes.
