@@ -1,9 +1,23 @@
 
-    What is a server
-    What is the role of the domain name
-    What type of DNS record www is in www.foobar.com
-    What is the role of the web server
-    What is the role of the application server
-    What is the role of the database
-    What is the server using to communicate with the computer of the user requesting the website
 
+* What is a server
+    A server is a computer designed to process requests and deliver data to other computers
+    Role in Infrastructure: Our server, which has the IP address 8.8.8.8, hosts the web application, web server, application server, and database.
+
+* What is the role of the domain name
+    The domain name system (DNS) translates www.foobar.com to the IP address 8.8.8.8
+
+* What type of DNS record www is in www.foobar.com
+    The www in www.foobar.com is a CNAME (Canonical Name) record that points to the IP address of the server (8.8.8.8)
+
+* What is the role of the web server
+     Handles incoming HTTP/HTTPS requests from the user's browser.
+
+* What is the role of the application server
+    The application server processes the request, interacting with the database if necessary, and sends the generated content back to the web server (Nginx).
+
+* What is the role of the database
+    Persistent data for the application
+
+* What is the server using to communicate with the computer of the user requesting the website
+    The server communicates with the user's computer using the HTTP/HTTPS protocol
