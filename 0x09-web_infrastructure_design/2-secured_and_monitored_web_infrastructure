@@ -1,0 +1,22 @@
+* The whiteboard design is in img folder under the name 2-secured_and_monitored_web_infrastructure.jpeg
+
+* For every additional element, why you are adding it
+   - Firewalls help to prevent unauthorized access to the servers by filtering incoming and outgoing network traffic based on security rules.
+   - HTTPS encrypts the data transmitted between the user's browser and the web server, protecting it from interception and tampering.
+   - Monitoring is used to track the performance and health of the infrastructure, detect issues, and alert administrators.
+
+* What are firewalls for
+    help to prevent unauthorized access to the servers by filtering incoming and outgoing network traffic based on security rules.
+
+* Why is the traffic served over HTTPS
+    encrypts the data transmitted between the user's browser and the web server, protecting it from interception and tampering.
+
+* What monitoring is used for
+    used to track the performance and health of the infrastructure, detect issues, and alert administrators.
+
+
+* How the monitoring tool is collecting data
+    Monitoring clients installed on each server collect data on various performance metrics and send this data to a centralized monitoring service like Sumologic
+
+* Explain what to do if you want to monitor your web server QPS
+    To monitor QPS (Queries Per Second) on your web server, you would configure the monitoring client to track and report metrics related to incoming HTTP requests
