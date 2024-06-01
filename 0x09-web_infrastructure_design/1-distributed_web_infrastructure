@@ -1,0 +1,36 @@
+* The whiteboard design is in img folder under the name 1-distributed_web_infrastructure.jpeg
+
+* For every additional element, why you are adding it
+    Load Balancer (HAproxy):
+    Reason for Adding: Distributes incoming traffic to prevent any single server from being overwhelmed and provides redundancy.
+
+* What distribution algorithm your load balancer is configured with and how it works
+    Distribution Algorithm: Round-robin, where requests are distributed sequentially and evenly across the servers.
+
+* Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+    Setup: Active-Active for high availability and load balancing.
+    - The difference between both
+        Active-Active: Both servers are actively handling requests, providing high availability and load balancing.
+        Active-Passive: One server is active and the other is on standby, taking over only if the active server fails.
+
+* How a database Primary-Replica (Master-Slave) cluster works
+    Primary Node (Master): Handles all write operations, ensuring data consistency.
+    Replica Node (Slave): Handles read operations, reducing load on the primary and ensuring data is replicated for redundancy.
+
+* What is the difference between the Primary node and the Replica node in regard to the application
+    - When a user updates their profile information (write operation), the application sends this request to the Primary node.
+    - The Primary node updates the user's profile information and then propagates this change to the Replica node.
+    - When another user views the profile (read operation), the application can send this request to the Replica node, thus reducing the load on the Primary node.
+
+* Issues with This Infrastructure
+
+    Single Points of Failure (SPOF):
+        Load Balancer: If the load balancer fails, the entire system becomes inaccessible.
+        Primary Database Node: If the primary node fails, write operations cannot be performed until a failover mechanism is initiated.
+
+    Security Issues:
+        No Firewall: Servers are exposed to potential attacks without a firewall.
+        No HTTPS: Data transmission is insecure without HTTPS, making it susceptible to interception.
+
+    No Monitoring:
+        Without monitoring, there is no way to proactively manage system health, leading to potential undetected failures and performance issues.
