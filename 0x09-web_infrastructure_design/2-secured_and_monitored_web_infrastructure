@@ -20,3 +20,13 @@
 
 * Explain what to do if you want to monitor your web server QPS
     To monitor QPS (Queries Per Second) on your web server, you would configure the monitoring client to track and report metrics related to incoming HTTP requests
+
+Terminating SSL at the Load Balancer Level:
+        Issue: If SSL is terminated at the load balancer, the traffic between the load balancer and the backend servers is unencrypted, which can be a security risk if the internal network is compromised.
+
+Single MySQL Server for Writes:
+        Issue: Having only one MySQL server capable of accepting writes creates a single point of failure for write operations. If this server goes down, no write operations can be performed.
+
+Servers with All the Same Components:
+        Issue: If each server runs the database, web server, and application server, it can lead to resource contention and complex maintenance. Scaling specific parts of the infrastructure independently becomes difficult.
+      
