@@ -2,6 +2,6 @@
 # Install ngix on web 01
 
 sudo apt-get -y update
-sudo apt-get -y install ngix
+sudo apt-get -y install nginx
 echo 'Hello World!' > /var/www/html/index.html
-service ngix restart
+service nginx restart
