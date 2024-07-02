@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Configure Nginx server to redirect /redirect_me to another page with a 301 Moved Permanently
+
+# Update package lists and install Nginx
+apt-get update && apt-get install -y nginx
+
+# Create the index.html file with the "Hello World!" content
+echo "Hello World!" > /var/www/html/index.html
+
+# Configure Nginx to serve the index.html and set up the redirect
+cat > /etc/nginx/sites-available/default <<EOL
+server {
+    listen 80;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm;
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+
+    location /redirect_me {
+        return 301 https://www.google.com;
+    }
+}
+EOL
+
+# Restart Nginx to apply the configuration
+service nginx restart
+
