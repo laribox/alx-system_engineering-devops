@@ -1,4 +1,4 @@
-k #0 with puppet 
+# task 0 with puppet 
 
 exec { 'update system':
         command => '/usr/bin/apt-get update',
