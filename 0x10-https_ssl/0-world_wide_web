@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# print domains and subdomains
+
+print () {
+    RESULT=$(dig $2 | grep -A1 'ANSWER SECTION:' | awk 'NR==2 {print $0}')
+    echo "The subdomain $1 is a $(echo $RESULT | awk '{print $4}') record and points to $(echo $RESULT | awk '{print $5}')"
+}
+
+if [ "$#" -eq 2 ]
+then
+    print "$2.$1" "$2"
+else
+    print "www.$1" "www"
+    print "lb-01.$1" "lb-01"
+    print "web-01.$1" "web-01"
+    print "web-02.$1" "web-02"
+fiiOL
