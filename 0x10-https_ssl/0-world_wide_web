@@ -8,10 +8,10 @@ print () {
 
 if [ "$#" -eq 2 ]
 then
-    print "$2.$1" "$2"
+    print "$2" "$2.$1"
 else
-    print "www.$1" "www"
-    print "lb-01.$1" "lb-01"
-    print "web-01.$1" "web-01"
-    print "web-02.$1" "web-02"
-fiiOL
+    print "www" "www.$1"
+    print "lb-01" "lb-01.$1"
+    print "web-01" "web-01.$1"
+    print "web-02" "web-02.$1"
+fi
