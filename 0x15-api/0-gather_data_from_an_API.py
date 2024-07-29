@@ -16,7 +16,7 @@ def fetch_user_todo_list(user_id):
     user_name = user.get('name')
     completed_tasks = [task for task in todos if task.get('completed')]
 
-    print(f"Employee {user_name} is done with"
+    print(f"Employee {user_name} is done with "
           f"tasks({len(completed_tasks)}/{len(todos)}):")
     for task in completed_tasks:
         print(f"\t {task.get('title')}")
