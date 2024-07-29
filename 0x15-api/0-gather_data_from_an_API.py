@@ -6,22 +6,15 @@ Rest API to fetch user todo list
 import requests
 import sys
 
-REST_API = "https://jsonplaceholder.typicode.com"
+REST_API = "https://jsonplaceholder.typicode.com/"
 
 
-def fetch_user_todo_list(user_id):
-    user = requests.get(f"{REST_API}/users/{user_id}").json()
-    todos = requests.get(f"{REST_API}/todos?userId={user_id}").json()
+if __name__ == "__main__": 
+    user = requests.get(REST_API + "users/{}".format(sys.argv[1])).json()
+    todos = requests.get(REST_API + "todos", params={"userId": sys.argv[1]}).json()
 
-    user_name = user.get('name')
-    completed_tasks = [task for task in todos if task.get('completed')]
-
-    print(f"Employee {user_name} is done with "
-          f"tasks({len(completed_tasks)}/{len(todos)}):")
-    for task in completed_tasks:
-        print(f"\t {task.get('title')}")
-
-
-if __name__ == '__main__':
-    if len(sys.argv) > 1 and sys.argv[1].isdigit():
-        fetch_user_todo_list(int(sys.argv[1]))
+    completed = [t.get("title") for t in todos if t.get("completed") is True]
+    print("Employee {} is done with tasks({}/{}):".format(
+        user.get("name"), len(completed), len(todos)))
+    for title in completed:
+        print(f"\t {title}")
