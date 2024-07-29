@@ -9,9 +9,10 @@ import sys
 REST_API = "https://jsonplaceholder.typicode.com/"
 
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
     user = requests.get(REST_API + "users/{}".format(sys.argv[1])).json()
-    todos = requests.get(REST_API + "todos", params={"userId": sys.argv[1]}).json()
+    todos = requests.get(REST_API + "todos",
+                         params={"userId": sys.argv[1]}).json()
 
     completed = [t.get("title") for t in todos if t.get("completed") is True]
     print("Employee {} is done with tasks({}/{}):".format(
