@@ -5,10 +5,10 @@ server {
         listen [::]:80 default_server ipv6only=on;
 
         # Use IP of server as domain name
-        server_name 35.174.205.207
+        server_name 54.160.119.223
 
         # custom http response header
-        add_header X-Served-By 270660-web-01;
+        add_header X-Served-By 440367-web-01;
 
         # serve /airbnb-onepage/ route on AirBnB_clone_v3
         location = /airbnb-onepage/ {
